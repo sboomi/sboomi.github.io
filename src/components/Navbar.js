@@ -4,7 +4,9 @@ const Navbar = ({ fields }) => {
   return (
     <div>
       {fields.map((field, index) => (
-        <div>field</div>
+        <div>
+          <a href={field.url}>{field.title}</a>
+        </div>
       ))}
     </div>
   );
