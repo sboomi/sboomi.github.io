@@ -1,7 +1,13 @@
 import React from 'react';
 
-const Navbar = () => {
-  return <div className="Navbar"></div>;
+const Navbar = ({ fields }) => {
+  return (
+    <div>
+      {fields.map((field, index) => (
+        <div>field</div>
+      ))}
+    </div>
+  );
 };
 
 export default Navbar;

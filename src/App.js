@@ -4,10 +4,12 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
 function App() {
+  const fields = ['about', 'github', 'contact'];
+
   return (
-    <div className="App">
+    <div>
       <Header />
-      <Navbar />
+      <Navbar fields={fields} />
       <Footer />
     </div>
   );
