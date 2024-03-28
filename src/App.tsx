@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
+  const year = new Date().getFullYear();
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header className="sticky top-0">
+        <h1 className="text-3xl">Shadi Boomi</h1>
+      </header>
+
+      <nav className="container mx-auto px-4 top-0 bottom-0 left-0">
+        <ul className="flex flex-col sm:justify-center space-x-4">
+          <li>
+            <a href="#">About Me</a>
+          </li>
+          <li>
+            <a href="#">Accomplishments</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section>
+        <h2>Introduction</h2>
+        <p>This is a short, typical introduction.</p>
+      </section>
+
+      <footer className="pt-8 text-base font-semibold leading-7 text-gray-900">
+        &copy; <span>{year}</span> Github Pages. All rights reserved.
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
