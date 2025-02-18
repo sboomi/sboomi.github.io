@@ -20,7 +20,7 @@ function App() {
   const sections = [
     {
       title: "Updates",
-      content: <Markdown>{updateMarkdown}</Markdown>,
+      content: <Markdown className="prose">{updateMarkdown}</Markdown>,
     },
   ];
 
