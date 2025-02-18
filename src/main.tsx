@@ -7,6 +7,7 @@ import Skills from "./pages/Skills.tsx";
 import Contact from "./pages/Contact.tsx";
 import About from "./pages/About.tsx";
 import Projects from "./pages/Projects.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Route path="contact" element={<Contact />} />
       <Route path="about" element={<About />} />
       <Route path="projects" element={<Projects />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   </BrowserRouter>,
 );
