@@ -1,0 +1,14 @@
+import React from "react";
+import Layout from "../components/Layout";
+import Markdown from "react-markdown";
+import aboutMarkdown from "../md-posts/about.md?raw";
+
+const About: React.FC = () => {
+  return (
+    <Layout>
+      <Markdown>{aboutMarkdown}</Markdown>
+    </Layout>
+  );
+};
+
+export default About;
