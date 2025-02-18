@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 export function Navbar() {
   const navItems = ["About", "Skills", "Contact", "Projects"];
 
@@ -6,12 +8,12 @@ export function Navbar() {
       <ul className="space-y-4">
         {navItems.map((item) => (
           <li key={item}>
-            <a
-              href={`#${item.toLowerCase()}`}
+            <NavLink
+              to={`/${item.toLowerCase()}`}
               className="block px-6 py-2 text-gray-700 hover:bg-gray-200 transition-colors"
             >
               {item}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>
