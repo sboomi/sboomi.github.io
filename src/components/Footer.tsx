@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="p-6 border-t">
       <div className="flex items-center gap-4 mb-4">
         <a
-          href="https://linkedin.com/shadiboomi"
+          href="www.linkedin.com/in/shadiboomi"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-700 hover:text-gray-900 transition-colors"
@@ -48,7 +48,10 @@ export function Footer() {
           <BsSubstack />
         </a>
       </div>
-      <p className="text-sm text-gray-600">© All Rights Reserved</p>
+      <div className="text-sm text-gray-600">
+        <p>© {new Date().getFullYear()} sboomi.</p>
+        <p>All rights reserved.</p>
+      </div>
     </footer>
   );
 }
