@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme {
+    --font-display: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  }

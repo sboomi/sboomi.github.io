@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { skills, SkillItemProps } from "../data";
+import { skills } from "../data";
+import { SkillItemProps } from "../types";
 
 const SkillCategory = ({
   category,
@@ -28,8 +29,6 @@ const SkillCategory = ({
 };
 
 const Skills: React.FC = () => {
-  console.log(skills);
-
   return (
     <Layout>
       <section className="py-12 px-4 max-w-6xl mx-auto">
