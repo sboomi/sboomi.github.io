@@ -10,8 +10,8 @@ function Skills({
   skills: SkillProps[];
   sectionTitle?: string;
 }) {
-  const skillDisplay = skills.map((skill) => (
-    <li>
+  const skillDisplay = skills.map((skill, index) => (
+    <li key={index}>
       <span className="font-bold">{skill.name}:</span> {skill.description}
     </li>
   ));

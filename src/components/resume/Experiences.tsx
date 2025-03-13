@@ -26,8 +26,8 @@ function Experience({
         </span>
       </h3>
       <ul className="list-disc pl-5">
-        {tasks.map((task) => (
-          <li>{task}</li>
+        {tasks.map((task, index) => (
+          <li key={index}>{task}</li>
         ))}
       </ul>
     </div>
@@ -46,8 +46,9 @@ function Experiences({
       <section>
         <h2 className="text-xl font-bold space-y-8 ">{sectionTitle}</h2>
         <hr className="border-delimsize border-black space-y-8" />
-        {experiences.map((experience) => (
+        {experiences.map((experience, index) => (
           <Experience
+            key={index}
             title={experience.title}
             company={experience.company}
             location={experience.location}
