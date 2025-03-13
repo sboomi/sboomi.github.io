@@ -1,7 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { projects, ProjectType } from "../data";
+import { projects } from "../data";
 import { FaGithub } from "react-icons/fa";
+import { ProjectType } from "../types";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   return (

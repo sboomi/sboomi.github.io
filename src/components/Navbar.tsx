@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 
 export function Navbar() {
-  const navItems = ["About", "Skills", "Contact", "Projects"];
+  const navItems = ["About", "Resume", "Skills", "Contact", "Projects"];
 
   return (
     <nav className="py-6">

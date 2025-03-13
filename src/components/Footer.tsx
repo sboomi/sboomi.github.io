@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="p-6 border-t">
       <div className="flex items-center gap-4 mb-4">
         <a
-          href="www.linkedin.com/in/shadiboomi"
+          href="https://www.linkedin.com/in/shadiboomi/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-700 hover:text-gray-900 transition-colors"
