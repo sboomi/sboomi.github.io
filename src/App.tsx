@@ -2,7 +2,8 @@ import Layout from "./components/Layout";
 import updateMarkdown from "./md-posts/updates.md?raw";
 import doingMarkdown from "./md-posts/currently-doing.md?raw";
 import generalPostMarkdown from "./md-posts/general-post.md?raw";
-import Markdown from "react-markdown";
+
+import { MarkdownFormatter } from "./components/MarkdownFormatter";
 
 interface ContentSectionProps {
   title: string;
@@ -22,15 +23,15 @@ function App() {
   const sections = [
     {
       title: "Currently doing",
-      content: <Markdown className="prose">{doingMarkdown}</Markdown>,
+      content: <MarkdownFormatter content={doingMarkdown} />,
     },
     {
       title: "General Post",
-      content: <Markdown className="prose">{generalPostMarkdown}</Markdown>,
+      content: <MarkdownFormatter content={generalPostMarkdown} />,
     },
     {
       title: "Updates",
-      content: <Markdown className="prose">{updateMarkdown}</Markdown>,
+      content: <MarkdownFormatter content={updateMarkdown} />,
     },
   ];
 

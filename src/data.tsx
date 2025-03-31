@@ -320,16 +320,16 @@ export const resumeFr = {
     { name: "Outils CI/CD", description: "Git, Docker, Kubernetes" },
     { name: "Cloud", description: "GCP, Azure, AWS" },
   ],
-  // languages: [
-  //   {
-  //     name: "French",
-  //     level: "Mother tongue",
-  //   },
-  //   {
-  //     name: "English",
-  //     level: "Fluent",
-  //   },
-  // ],
+  languages: [
+    {
+      name: "French",
+      level: "Langue maternelle",
+    },
+    {
+      name: "English",
+      level: "Courant",
+    },
+  ],
   experiences: [
     {
       title: "Data Engineer",

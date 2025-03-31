@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Markdown from "react-markdown";
 import aboutMarkdown from "../md-posts/about.md?raw";
+import MarkdownFormatter from "../components/MarkdownFormatter";
 
 const About: React.FC = () => {
   return (
     <Layout>
-      <Markdown className="prose">{aboutMarkdown}</Markdown>
+      <MarkdownFormatter content={aboutMarkdown} />
     </Layout>
   );
 };
