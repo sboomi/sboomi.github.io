@@ -2,5 +2,5 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-    --font-display: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-  }
+	--font-display: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+}
