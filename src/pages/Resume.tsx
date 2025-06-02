@@ -132,10 +132,10 @@ const Resume: React.FC = () => {
 			</div>
 
 			{/* Resume */}
-			<div className="flex justify-center space-x-4 p-4 border-gray-500">
+			<div className="flex justify-center space-x-4 p-4 border-gray-500 dark:border-gray-500">
 				<div
 					ref={targetRef}
-					className="border w-[210mm] min-h-[297mm] bg-white shadow-lg font-display"
+					className="border w-[210mm] min-h-[297mm] bg-white shadow-lg font-display dark:text-black"
 				>
 					<div className="tracking-tight flex flex-col space-y-3.5 m-8 text-sm">
 						{displayedResume.languages ? (

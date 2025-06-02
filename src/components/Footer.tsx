@@ -9,7 +9,7 @@ export function Footer() {
 					href="https://www.linkedin.com/in/shadiboomi/"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-gray-700 hover:text-gray-900 transition-colors"
+					className="text-gray-700 dark:text-gray-300 hover:text-gray-900 transition-colors"
 				>
 					<FaLinkedin />
 				</a>
@@ -17,7 +17,7 @@ export function Footer() {
 					href="https://github.com/sboomi"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-gray-700 hover:text-gray-900 transition-colors"
+					className="text-gray-700 dark:text-gray-300 hover:text-gray-900 transition-colors"
 				>
 					<FaGithub />
 				</a>
@@ -25,7 +25,7 @@ export function Footer() {
 					href="https://www.kaggle.com/sboomi"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-gray-700 hover:text-gray-900 transition-colors"
+					className="text-gray-700 dark:text-gray-300 hover:text-gray-900 transition-colors"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -43,12 +43,12 @@ export function Footer() {
 					href="https://substack.com/@shadiboomi290987"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-gray-700 hover:text-gray-900 transition-colors"
+					className="text-gray-700 dark:text-gray-300 hover:text-gray-900 transition-colors"
 				>
 					<BsSubstack />
 				</a>
 			</div>
-			<div className="text-sm text-gray-600">
+			<div className="text-sm text-gray-600 dark:text-gray-300">
 				<p>© {new Date().getFullYear()} sboomi.</p>
 				<p>All rights reserved.</p>
 			</div>

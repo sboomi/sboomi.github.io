@@ -65,70 +65,73 @@ const Contact: React.FC = () => {
 
 	return (
 		<Layout>
-			<Form {...form}>
-				<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-					<FormField
-						control={form.control}
-						name="email"
-						render={({ field }) => (
-							<FormItem>
-								<FormLabel>Username</FormLabel>
-								<FormControl>
-									<Input
-										type="email"
-										placeholder="myname@example.com"
-										{...field}
-									/>
-								</FormControl>
-								<FormDescription>
-									Your email (ie. "example@example.com")
-								</FormDescription>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
+			<div className="space-y-8">
+				<h1 className="text-3xl font-bold">Contact Form</h1>
+				<Form {...form}>
+					<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+						<FormField
+							control={form.control}
+							name="email"
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>Username</FormLabel>
+									<FormControl>
+										<Input
+											type="email"
+											placeholder="myname@example.com"
+											{...field}
+										/>
+									</FormControl>
+									<FormDescription>
+										Your email (ie. "example@example.com")
+									</FormDescription>
+									<FormMessage />
+								</FormItem>
+							)}
+						/>
 
-					<FormField
-						control={form.control}
-						name="subject"
-						render={({ field }) => (
-							<FormItem>
-								<FormLabel>Subject</FormLabel>
-								<FormControl>
-									<Input placeholder="My message's title" {...field} />
-								</FormControl>
-								<FormDescription>The subject title</FormDescription>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
+						<FormField
+							control={form.control}
+							name="subject"
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>Subject</FormLabel>
+									<FormControl>
+										<Input placeholder="My message's title" {...field} />
+									</FormControl>
+									<FormDescription>The subject title</FormDescription>
+									<FormMessage />
+								</FormItem>
+							)}
+						/>
 
-					<FormField
-						control={form.control}
-						name="message"
-						render={({ field }) => (
-							<FormItem>
-								<FormLabel>Your message</FormLabel>
-								<FormControl>
-									<Textarea placeholder="Type something!" {...field} />
-								</FormControl>
-								<FormDescription>
-									Must be between 15 and 3000 characters.
-								</FormDescription>
-								<FormMessage />
-							</FormItem>
+						<FormField
+							control={form.control}
+							name="message"
+							render={({ field }) => (
+								<FormItem>
+									<FormLabel>Your message</FormLabel>
+									<FormControl>
+										<Textarea placeholder="Type something!" {...field} />
+									</FormControl>
+									<FormDescription>
+										Must be between 15 and 3000 characters.
+									</FormDescription>
+									<FormMessage />
+								</FormItem>
+							)}
+						/>
+						{form.formState.isSubmitting ? (
+							<Button disabled>Please wait</Button>
+						) : (
+							<Button type="submit">Submit</Button>
 						)}
-					/>
-					{form.formState.isSubmitting ? (
-						<Button disabled>Please wait</Button>
-					) : (
-						<Button type="submit">Submit</Button>
-					)}
-				</form>
-			</Form>
-			{form.formState.isSubmitSuccessful ? (
-				<p>Message successfully sent! Would you like to send another</p>
-			) : null}
+					</form>
+				</Form>
+				{form.formState.isSubmitSuccessful ? (
+					<p>Message successfully sent! Would you like to send another</p>
+				) : null}
+			</div>
 		</Layout>
 	);
 };
