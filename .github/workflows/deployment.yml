@@ -46,7 +46,7 @@ jobs:
         with:
           version: latest
       - name: Run Biome
-        run: biome ci .
+        run: biome ci ./src
       - name: Build
         run: pnpm run build
       - name: Setup Pages
