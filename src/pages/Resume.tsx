@@ -1,15 +1,16 @@
+import Layout from "@/components/Layout";
+import Notification from "@/components/Notification";
+import Education from "@/components/resume/Education";
+import Experiences from "@/components/resume/Experiences";
+import Header from "@/components/resume/Header";
+import Projects from "@/components/resume/Projects";
+import Skills from "@/components/resume/Skills";
+import { Button } from "@/components/ui/button";
+import { resume, resumeFr } from "@/data";
+import { formatResumeToMarkdown } from "@/lib/formatter";
 import React, { useState, useRef } from "react";
 import { LuDownload } from "react-icons/lu";
 import generatePDF from "react-to-pdf";
-import Layout from "../components/Layout";
-import Notification from "../components/Notification";
-import Education from "../components/resume/Education";
-import Experiences from "../components/resume/Experiences";
-import Header from "../components/resume/Header";
-import Projects from "../components/resume/Projects";
-import Skills from "../components/resume/Skills";
-import { resume, resumeFr } from "../data";
-import { formatResumeToMarkdown } from "../lib/formatter";
 
 const Resume: React.FC = () => {
 	const targetRef = useRef(null);
@@ -88,43 +89,37 @@ const Resume: React.FC = () => {
 				<h1 className="text-xl font-bold transition-colors">Resume</h1>
 				<div className="flex justify-between space-x-4 p-4 items-center">
 					<div>
-						<button
-							className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+						<Button
 							onClick={() => {
 								setDisplayedResume(resume);
 								setDisplayedLanguage("en");
 							}}
+							variant="outline"
 						>
 							EN
-						</button>
-						<button
-							className="text-white bg-blue-700 hover:bg-blue-800  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-600 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+						</Button>
+						<Button
 							onClick={() => {
 								setDisplayedResume(resumeFr);
 								setDisplayedLanguage("fr");
 							}}
+							variant="outline"
 						>
 							FR
-						</button>
+						</Button>
 					</div>
 					<div className="flex flex-col items-end space-y-1">
 						<span className="text-sm font-medium px-5">
 							Download PDF or copy
 						</span>
 						<div className="flex space-x-2">
-							<button
-								onClick={() => handleOnClick()}
-								className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-							>
+							<Button onClick={() => handleOnClick()} variant="outline">
 								<LuDownload className="w-3.5 h-3.5 me-2" />
 								Download
-							</button>
-							<button
-								className="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-xs px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-								onClick={() => handleOnCopyPasted()}
-							>
+							</Button>
+							<Button onClick={() => handleOnCopyPasted()} variant="outline">
 								Copy to clipboard
-							</button>
+							</Button>
 							<Notification
 								message={notificationState.message}
 								show={notificationState.isVisible}

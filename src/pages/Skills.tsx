@@ -1,7 +1,7 @@
+import Layout from "@/components/Layout";
+import { skills } from "@/data.tsx";
+import type { SkillItemProps } from "@/types.ts";
 import React from "react";
-import Layout from "../components/Layout";
-import { skills } from "../data";
-import { SkillItemProps } from "../types";
 
 const SkillCategory = ({
 	category,
