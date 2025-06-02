@@ -1,3 +1,4 @@
+import React from "react";
 import Layout from "./components/Layout";
 import doingMarkdown from "./md-posts/currently-doing.md?raw";
 import generalPostMarkdown from "./md-posts/general-post.md?raw";
