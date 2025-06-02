@@ -1,18 +1,20 @@
-import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
-import tailwindcss from '@tailwindcss/vite'
-import { visualizer } from 'rollup-plugin-visualizer';
+import { visualizer } from "rollup-plugin-visualizer";
+import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(),
-    visualizer({
+	plugins: [
+		react(),
+		tailwindcss(),
+		visualizer({
 			emitFile: true,
-			filename: 'stats.html'
-		})
-  ],
-  server: {
-    port: 3002,
-  },
-  assetsInclude: ['**/*.md'],
+			filename: "stats.html",
+		}),
+	],
+	server: {
+		port: 3002,
+	},
+	assetsInclude: ["**/*.md"],
 });

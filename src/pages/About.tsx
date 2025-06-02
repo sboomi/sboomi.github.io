@@ -1,14 +1,14 @@
 import React from "react";
 import Layout from "../components/Layout";
-import aboutMarkdown from "../md-posts/about.md?raw";
 import MarkdownFormatter from "../components/MarkdownFormatter";
+import aboutMarkdown from "../md-posts/about.md?raw";
 
 const About: React.FC = () => {
-  return (
-    <Layout>
-      <MarkdownFormatter content={aboutMarkdown} />
-    </Layout>
-  );
+	return (
+		<Layout>
+			<MarkdownFormatter content={aboutMarkdown} />
+		</Layout>
+	);
 };
 
 export default About;
