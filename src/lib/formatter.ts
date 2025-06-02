@@ -1,4 +1,4 @@
-import { Resume } from "../types";
+import type { Resume } from "@/types";
 
 export function formatResumeToMarkdown(
 	resumeObject: Resume,
