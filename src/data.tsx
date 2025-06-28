@@ -1,4 +1,3 @@
-import type { ProjectType, Resume } from "@/types.ts";
 import {
 	FaAws,
 	FaBolt,
@@ -19,6 +18,7 @@ import {
 	FaReact,
 	FaTable,
 } from "react-icons/fa";
+import type { ProjectType, Resume } from "@/types.ts";
 
 export const projects: ProjectType[] = [
 	{

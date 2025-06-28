@@ -1,3 +1,6 @@
+import React, { useRef, useState } from "react";
+import { LuDownload } from "react-icons/lu";
+import generatePDF from "react-to-pdf";
 import Layout from "@/components/Layout";
 import Notification from "@/components/Notification";
 import Education from "@/components/resume/Education";
@@ -8,9 +11,6 @@ import Skills from "@/components/resume/Skills";
 import { Button } from "@/components/ui/button";
 import { resume, resumeFr } from "@/data";
 import { formatResumeToMarkdown } from "@/lib/formatter";
-import React, { useState, useRef } from "react";
-import { LuDownload } from "react-icons/lu";
-import generatePDF from "react-to-pdf";
 
 const Resume: React.FC = () => {
 	const targetRef = useRef(null);
