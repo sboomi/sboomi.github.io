@@ -1,3 +1,8 @@
+import { useSubmit } from "@formspree/react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import React from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod/v4";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,11 +16,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useSubmit } from "@formspree/react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import React from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod/v4";
 
 const formSchema = z.object({
 	email: z.email("Not a proper email address"),

@@ -1,10 +1,9 @@
+import React from "react";
 import Layout from "@/components/Layout";
+import { MarkdownFormatter } from "@/components/MarkdownFormatter";
 import doingMarkdown from "@/md-posts/currently-doing.md?raw";
 import generalPostMarkdown from "@/md-posts/general-post.md?raw";
 import updateMarkdown from "@/md-posts/updates.md?raw";
-import React from "react";
-
-import { MarkdownFormatter } from "@/components/MarkdownFormatter";
 
 interface ContentSectionProps {
 	title: string;

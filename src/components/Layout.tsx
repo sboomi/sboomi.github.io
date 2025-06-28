@@ -1,8 +1,8 @@
+import React from "react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import React from "react";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
 	return (

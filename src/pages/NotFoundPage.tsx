@@ -1,6 +1,6 @@
-import Layout from "@/components/Layout";
 import React from "react";
 import { NavLink } from "react-router";
+import Layout from "@/components/Layout";
 
 const NotFoundPage: React.FC = () => {
 	return (
