@@ -2,7 +2,7 @@ import { useSubmit } from "@formspree/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { z } from "zod/v4";
+import { z } from "zod";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import {

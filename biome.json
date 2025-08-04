@@ -1,16 +1,31 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.1.3/schema.json",
 	"vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
 	"files": {
 		"includes": [
 			"**",
-			"!**/build",
-			"!**/coverage",
-			"!**/node_modules",
-			"!**/dist",
+			"!**/build/**",
+			"!**/coverage/**",
+			"!**/node_modules/**",
+			"!**/dist/**",
 			"!**/src/routeTree.gen.ts",
 			"!**/playwright.config.ts",
-			"!**/playwright-report"
+			"!**/playwright-report/**",
+			"!**/.sst/**",
+			"!**/.turbo/**",
+			"!**/.venv/**",
+			"!**/packages/design-system/components/ui/**",
+			"!**/packages/design-system/lib/**",
+			"!**/packages/design-system/hooks/**",
+			"!**/apps/email/.react-email/**"
+		],
+		"experimentalScannerIgnores": [
+			"node_modules",
+			"dist",
+			".sst",
+			".next",
+			".turbo",
+			".venv"
 		]
 	},
 	"formatter": { "enabled": true, "indentStyle": "tab" },
